@@ -135,7 +135,7 @@ namespace SearchAlgorithm
                             Console.WriteLine("Binary Search");
                             Console.WriteLine("---------------");
                             myList.input();
-                            myList. BinarySearch();
+                            myList.BinarySearch();
                             break;
                         case 3:
                             Console.WriteLine(" Exit ");
@@ -145,8 +145,15 @@ namespace SearchAlgorithm
                             break;
 
                     }
-                }
-            }
+                    Console.WriteLine("\nPilih menu lagi (y/n) :");
+                    ch = char.Parse(Console.ReadLine().ToLower());
+                    Console.Clear();
+                } while (ch == 'y');
+
+                //to exit from the console
+                Console.WriteLine("\n\nPress Return to exit. ");
+                Console.ReadLine();
+            } while (pilihanmenu != 3);
         }
     }
 }
