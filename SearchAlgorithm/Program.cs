@@ -57,16 +57,23 @@ namespace SearchAlgorithm
                 int ctr = 1;
 
                 //Loop to search for the elements in the array
-                while ((item != arr[mid] && (lowerbound <= upperbound)){
+                while ((item != arr[mid] && (lowerbound <= upperbound)))
+                {
                     if (item > arr[mid])
                         lowerbound = mid + 1;
                     else
                         upperbound = mid - 1;
                     mid = (lowerbound + upperbound) / 2;
-                        ctr++;
+                    ctr++;
                 }
+                if (item == arr[mid])
+                    Console.WriteLine("\n" + item.ToString() + "found at position" + (mid + 1).ToString());
+                else
+                    Console.WriteLine("\nNumber of comparison :" + ctr);
 
-            }
+                Console.Write("\nContinue search (y/n) ");
+                ch = char.Parse(Console.ReadLine().ToUpper());
+            } while ((ch == 'y'));
         }
 
         static void Main(string[] args)
