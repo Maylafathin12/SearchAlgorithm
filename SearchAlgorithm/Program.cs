@@ -57,6 +57,14 @@ namespace SearchAlgorithm
                 int ctr = 1;
 
                 //Loop to search for the elements in the array
+                while ((item != arr[mid] && (lowerbound <= upperbound)){
+                    if (item > arr[mid])
+                        lowerbound = mid + 1;
+                    else
+                        upperbound = mid - 1;
+                    mid = (lowerbound + upperbound) / 2;
+                        ctr++;
+                }
 
             }
         }
